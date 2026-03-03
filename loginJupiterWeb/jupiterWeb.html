@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupiter</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 2px;
+            border-bottom: 20px solid #fcb421;
+        }
+
+        
+        .l1 {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 4vw; 
+
+            background-color: #64c4d2; 
+            padding: 2vw;         
+            border-radius: 5px;      
+            width: 180px;         
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+        }
+
+        .l2 {
+            display: flex;
+            flex-direction: column;
+
+            background-color: #64c4d2; 
+            padding: 2vw;         
+            border-radius: 5px;      
+            width: 180px;         
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10vw;
+            padding-top: 4vw;
+            padding-bottom: 4vw;
+            padding: 3vw;    
+            overflow: hidden; 
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%),
+                    url("https://imagens.usp.br/wp-content/uploads/Pra%C3%A7a-do-Rel%C3%B3gio-005-14-foto-Cec%C3%ADlia-Bastos-05a.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 4vw;
+
+            background-color: #64c4d2; 
+            padding: 2vw;         
+            border-radius: 5px;      
+            width: 250px;         
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 2vw;
+            background-color: #ffffff;
+        }
+
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <img src="https://uspdigital.usp.br/comumwebdev/imagens/cabecalho/usp-logo.png">
+        <img src="https://uspdigital.usp.br/comumwebdev/imagens/cabecalho/usp-logo-texto.png">
+        <div>
+    </header>
+    
+    <div></div>
+
+    <main>
+        <div class="links">
+            <div class="l1">
+                Público
+                <a href="https://www.youtube.com/watch?v=Zj7_mUZ6Cpw">Calendário Escolar</a>
+                <a href="https://www.youtube.com/watch?v=Zj7_mUZ6Cpw">Cursos de Ingresso</a>
+                <a href="https://www.youtube.com/watch?v=Zj7_mUZ6Cpw">Disciplina</a>
+                <a href="https://www.youtube.com/watch?v=Zj7_mUZ6Cpw">Editais</a>
+                <a href="https://www.youtube.com/watch?v=Zj7_mUZ6Cpw">FAQ</a>    
+            </div>
+
+            <div></div>
+
+            <div class="l2">
+					Acesso Restrito
+                <a href="https://www.youtube.com/watch?v=Zj7_mUZ6Cpw">Entrar</a>
+                <a href="https://www.youtube.com/watch?v=Zj7_mUZ6Cpw">Esqueci a Senha</a>
+                <a href="https://www.youtube.com/watch?v=Zj7_mUZ6Cpw">Primeiro Acesso</a>            
+            </div>
+        </div>
+        
+        <form>
+            Login
+            <input type="usuário" placeholder="Usuário" name="primeiro">
+            <input type="password" placeholder="Senha" name="senha">
+            <input type="submit" value="Entrar">
+        </form>
+    </main>
+
+    <footer>
+        <a href="https://www.youtube.com/watch?v=Zj7_mUZ6Cpw">Créditos | Fale conosco</a>
+        © 1999 - 2026 - Superintendência de Tecnologia da Informação/USP 
+    </footer>
+</body>
+
+</html>
