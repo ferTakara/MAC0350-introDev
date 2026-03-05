@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html data-darkreader-mode="dynamic" data-darkreader-scheme="dark" lang="pt-br"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--user-agent" media="screen">@layer {
+html {
+    background-color: var(--darkreader-background-ffffff, #373839) !important;
+}
+html {
+    color-scheme: dark !important;
+}
+iframe {
+    color-scheme: dark !important;
+}
+html, body {
+    background-color: var(--darkreader-background-ffffff, #373839);
+}
+html, body {
+    border-color: var(--darkreader-border-4c4c4c, #777168);
+    color: var(--darkreader-text-000000, #c9c7c5);
+}
+a {
+    color: var(--darkreader-text-0040ff, #4a8cd9);
+}
+table {
+    border-color: var(--darkreader-border-808080, #616668);
+}
+mark {
+    color: var(--darkreader-text-000000, #c9c7c5);
+}
+::placeholder {
+    color: var(--darkreader-text-a9a9a9, #a39e97);
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: var(--darkreader-background-faffbd, #535626) !important;
+    color: var(--darkreader-text-000000, #c9c7c5) !important;
+}
+* {
+    scrollbar-color: var(--darkreader-background-b0b0b0, #575a5c) var(--darkreader-background-f1f1f1, #3d3f3f);
+}
+::selection {
+    background-color: var(--darkreader-background-0060d4, #265c9d) !important;
+    color: var(--darkreader-text-ffffff, #c9c7c5) !important;
+}
+::-moz-selection {
+    background-color: var(--darkreader-background-0060d4, #265c9d) !important;
+    color: var(--darkreader-text-ffffff, #c9c7c5) !important;
+}
+}</style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, img.Wirisformula, a[data-testid="headerMediumLogo"]>svg, .d2l-navigation-link-image-container, .d2l-iframe-loading-container {
+    filter: invert(100%) hue-rotate(180deg) contrast(60%) !important;
+}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+}
+[data-darkreader-inline-bg] {
+  background: var(--darkreader-inline-bg) !important;
+}
+[data-darkreader-inline-border-short] {
+  border: var(--darkreader-inline-border-short) !important;
+}
+[data-darkreader-inline-border-bottom-short] {
+  border-bottom: var(--darkreader-inline-border-bottom-short) !important;
+}
+[data-darkreader-inline-border-left-short] {
+  border-left: var(--darkreader-inline-border-left-short) !important;
+}
+[data-darkreader-inline-border-right-short] {
+  border-right: var(--darkreader-inline-border-right-short) !important;
+}
+[data-darkreader-inline-border-top-short] {
+  border-top: var(--darkreader-inline-border-top-short) !important;
+}
+[data-darkreader-inline-invert] {
+    filter: invert(100%) hue-rotate(180deg);
+}</style><style class="darkreader darkreader--variables" media="screen">:root {
+   --darkreader-neutral-background: var(--darkreader-background-ffffff, #373839);
+   --darkreader-neutral-text: var(--darkreader-text-000000, #c9c7c5);
+   --darkreader-selection-background: var(--darkreader-background-0060d4, #265c9d);
+   --darkreader-selection-text: var(--darkreader-text-ffffff, #c9c7c5);
+}</style><style class="darkreader darkreader--root-vars" media="screen"></style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios - JS Avançado: DOM e Memória</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="Exerc%C3%ADcios%20-%20JS%20Avan%C3%A7ado_%20DOM%20e%20Mem%C3%B3ria_files/css2.css" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #292827;
+            --surface-color: #363636;
+            --primary-text-color: #e0e0e0;
+            --secondary-text-color: #a0a0a0;
+            --accent-color-1: #ff690a;
+            --accent-color-2: #ff690a;
+            --border-color: #444;
+            --code-bg: #404040;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7;
+            background-color: var(--background-color);
+            color: var(--primary-text-color);
+            margin: 0;
+            padding: 2rem 1.5rem;
+        }
+
+        .container { 
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 { color: var(--accent-color-1); font-weight: 700; }
+        h1 { border-bottom: 2px solid var(--border-color); padding-bottom: 10px; margin-bottom: 30px; }
+        
+        .exercise-box {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--accent-color-1);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        code {
+            background-color: var(--code-bg);
+            color: var(--accent-color-2);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        button {
+            background-color: var(--code-bg);
+            color: var(--accent-color-1);
+            border: 1px solid var(--accent-color-1);
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-top: 15px;
+            transition: all 0.2s;
+        }
+
+        button:hover { background-color: var(--accent-color-1); color: #fff; }
+        
+        input, select {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            background: var(--background-color);
+            color: var(--primary-text-color);
+            margin-top: 10px;
+        }
+
+        .output-text { display: inline-block; margin-left: 15px; font-weight: bold; color: #fff; }
+        ul.dynamic-list { margin-top: 15px; padding-left: 20px; }
+    </style><style class="darkreader darkreader--sync" media="screen"></style>
+<meta name="darkreader" content="4eaea83b1b504aa5b1df78cb3ea8415f"><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
+    background-color: var(--darkreader-background-ffd76e, #6f5b26) !important;
+    border-color: var(--darkreader-background-c59d00, #957e26) !important;
+    color: var(--darkreader-text-302505, #bdbbb7) !important;
+}
+#vimvixen-console-frame {
+    color-scheme: light !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1,
+.nfe-quote-text {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: var(--darkreader-background-add8e6, #395964) !important;
+}
+.tou-z65h9k,
+.tou-mignzq,
+.tou-1b6i2ox,
+.tou-lnqlqk {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.tou-75mvi {
+    background-color: var(--darkreader-background-cfecf5, #314f58) !important;
+}
+.tou-ta9e87,
+.tou-1w3fhi0,
+.tou-1b8t2us,
+.tou-py7lfi,
+.tou-1lpmd9d,
+.tou-1frrtv8,
+.tou-17ezmgn {
+    background-color: var(--darkreader-background-f5f5f5, #3b3d3d) !important;
+}
+.tou-uknfeu {
+    background-color: var(--darkreader-background-faedda, #55452d) !important;
+}
+.tou-6i3zyv {
+    background-color: var(--darkreader-background-85c3d8, #3f6775) !important;
+}
+div.mermaid-viewer-control-panel .btn {
+    background-color: var(--darkreader-neutral-background);
+    fill: var(--darkreader-neutral-text);
+}
+svg g rect.er {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.entityBox {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.attributeBoxOdd {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.attributeBoxEven {
+    fill: var(--darkreader-selection-background);
+    fill-opacity: 0.8 !important;
+}
+svg rect.er.relationshipLabelBox {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g g.nodes rect,
+svg g g.nodes polygon {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.task {
+    fill: var(--darkreader-selection-background) !important;
+}
+svg line.messageLine0,
+svg line.messageLine1 {
+    stroke: var(--darkreader-neutral-text) !important;
+}
+div.mermaid .actor {
+    fill: var(--darkreader-neutral-background) !important;
+}
+mitid-authenticators-code-app > .code-app-container {
+    background-color: white !important;
+    padding-top: 1rem;
+}
+iframe#unpaywall[src$="unpaywall.html"] {
+    color-scheme: light !important;
+}
+select {
+    --darkreader-bg--form-control-background-color: rgba(22, 22, 22, 0) !important;
+}
+body#tumblr {
+    --darkreader-bg--secondary-accent: 31, 32, 34 !important;
+    --darkreader-bg--white: 23, 23, 23 !important;
+    --darkreader-text--black: 228, 224, 218 !important;
+}
+:host {
+    --d2l-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-button-icon-background-color-hover: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-color-ferrite: var(--darkreader-neutral-text) !important;
+    --d2l-color-sylvite: var(--darkreader-bg--d2l-color-sylvite) !important;
+    --d2l-dropdown-background-color: var(--darkreader-neutral-background) !important;
+    --d2l-dropdown-border-color: var(--darkreader-border--d2l-color-mica) !important;
+    --d2l-input-backgroud-color: var(--darkreader-neutral-background) !important;
+    --d2l-menu-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-tooltip-background-color: var(--darkreader-neutral-background) !important;
+    --d2l-tooltip-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+:host([_floating]) .d2l-floating-buttons-container {
+    background-color: var(--darkreader-neutral-background) !important;
+    border-top-color: var(--darkreader-border--d2l-color-mica) !important;
+    opacity: 0.88 !important;
+}
+d2l-card {
+    background: var(--darkreader-neutral-background) !important;
+    border-color: var(--darkreader-border--d2l-color-gypsum) !important;
+}
+d2l-dropdown-content > div,
+d2l-menu-item {
+    background-color: var(--darkreader-neutral-background) !important;
+    border-radius: 10px !important;
+}
+d2l-empty-state-simple {
+    border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-button-filter > ul > li > a.vui-button {
+    border-color: var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-label-text:has(.d2l-button-subtle-content):hover,
+.d2l-label-text:has(.d2l-button-subtle-content):focus,
+.d2l-label-text:has(.d2l-button-subtle-content):active {
+    background-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-navigation-centerer {
+    color: inherit !important;
+}
+.d2l-tabs-layout {
+    border-color: var(--darkreader-border--d2l-color-gypsum) !important;
+}
+.d2l-input,
+.d2l-calendar-date,
+.d2l-htmleditor-container {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.d2l-collapsible-panel {
+    border: 1px solid var(--darkreader-border--d2l-color-mica) !important;
+    border-radius: 0.4rem !important;
+}
+.d2l-collapsible-panel-divider {
+    border-bottom: 1px solid var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-w2d-flex {
+    border-bottom: 2px solid var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-collapsible-panel scrolled,
+.d2l-collapsible-panel-header,
+.d2l-w2d-collection-fixed {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.d2l-loading-spinner-bg {
+    fill: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-loading-spinner-bg-stroke {
+    stroke: var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-loading-spinner-wrapper svg path,
+.d2l-loading-spinner-wrapper svg circle {
+    fill: var(--darkreader-neutral-background) !important;
+}
+.d2l-twopanelselector-side.d2l-twopanelselector-side-sep {
+    background: var(--darkreader-bg--d2l-color-mica) !important;
+}
+.d2l-le-TreeAccordionItem-anchor::before {
+    background: var(--darkreader-bg--d2l-color-corundum) !important;
+}
+embed[type="application/pdf"] { filter: invert(100%) contrast(90%); }</style></head>
+<body>
+
+<div class="container">
+    <h1>Exercícios Práticos: DOM, Eventos e Storage</h1>
+    <p>Utilize a tag <code>&lt;script&gt;</code> no final deste arquivo. <strong>Regra de Ouro:</strong> Não altere o HTML. Use apenas <code>addEventListener</code> e <code>DOMContentLoaded</code>!</p>
+
+    <div class="exercise-box">
+        <h3>1. Separando o JS do HTML</h3>
+        <p>Remova a dependência do <code>onclick</code>. Capture o botão abaixo pelo seu ID e adicione um <em>Event Listener</em> de 'click' que mude o texto dele para "Fui clicado via Listener!".</p>
+        <button id="btn-listener">Me clique (sem onclick)</button>
+    </div>
+
+    <div class="exercise-box">
+        <h3>2. Criação Dinâmica (createElement)</h3>
+        <p>Digite algo no campo de texto e clique em adicionar. O seu JS deve ler o <code>.value</code> do input, usar <code>document.createElement('li')</code> e dar um <code>append</code> na lista vazia abaixo.</p>
+        <input type="text" id="input-item" placeholder="Novo item da lista...">
+        <button id="btn-add">Adicionar</button>
+        <ul id="lista-itens" class="dynamic-list"></ul>
+    </div>
+
+    <div class="exercise-box">
+        <h3>3. O Cronômetro (setInterval)</h3>
+        <p>Crie uma lógica para um cronômetro. Ao clicar em "Iniciar", use <code>setInterval</code> para aumentar o número do visor a cada 1 segundo (1000ms).</p>
+        <button id="btn-iniciar">Iniciar Cronômetro</button>
+        <span id="visor-cronometro" class="output-text">0</span>
+    </div>
+
+    <div class="exercise-box">
+        <h3>4. Memória com Local Storage</h3>
+        <p>Escolha um time no menu suspenso. O JS deve escutar o evento <code>change</code> do menu, atualizar o texto "Nenhum selecionado" e <strong>salvar a escolha no Local Storage</strong>. <br><em>Desafio:</em> Ao recarregar a página, o código deve buscar o valor salvo no Storage e exibi-lo automaticamente.</p>
+        
+        <select id="select-time" title="Escolha um time">
+            <option value="" selected="selected">Escolha um time...</option>
+            <option value="São Paulo">São Paulo</option>
+            <option value="Corinthians">Corinthians</option>
+            <option value="Palmeiras">Palmeiras</option>
+            <option value="Santos">Santos</option>
+        </select>
+        <span id="time-selecionado" class="output-text">Nenhum selecionado</span>
+    </div>
+
+</div>
+
+<script>
+    // Funçoes
+    function contar() {
+        let alvo = document.querySelector('#btn-listener');
+        alvo.innerHTML = `Fui clicado via Listener!`
+    }
+
+    function adicionar() {
+            let valor = document.querySelector('#input-item');
+            let lista = document.querySelector('#lista-itens');
+            const li = document.createElement('li');
+            li.innerHTML = valor.value
+
+            lista.append(li);
+            valor.value = '';
+            return false;
+    }
+
+    function cronometro() {
+            const h1 = document.querySelector('#visor-cronometro')
+            if (h1.innerHTML == 0) {
+                let timer = 0
+                h1.innerText = timer
+
+                setInterval(() => {
+                    timer++
+                    h1.innerText = timer
+                },1000)
+                return false;
+            }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // --- Exercício 1 ---
+        document.querySelector('#btn-listener').onclick = contar;
+        
+        
+        // --- Exercício 2 ---
+        document.querySelector('#btn-add').onclick = adicionar;
+        
+        
+        // --- Exercício 3 ---
+        // Dica: Crie a variável do tempo aqui fora, e o setInterval dentro do listener do botão
+        document.querySelector('#btn-iniciar').onclick = cronometro;
+        
+        
+        // --- Exercício 4 ---
+        // Seu código aqui (Lembre-se de checar o localStorage logo que a página carregar!)
+        if (!localStorage.getItem('time')) {
+            localStorage.setItem('time', 'Nenhum selecionado');
+        }
+
+        const selectElement = document.getElementById('select-time');
+
+        selectElement.addEventListener('change', (event) => {
+            const valorSelecionado = event.target.value;
+            let time = document.querySelector('#time-selecionado');
+            time.innerHTML = valorSelecionado;
+            localStorage.setItem('time', valorSelecionado);
+        });
+
+        document.querySelector('#time-selecionado').innerHTML = localStorage.getItem('time');
+    });
+</script>
+
+
+</body></html>
