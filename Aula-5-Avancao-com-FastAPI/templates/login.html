@@ -1,0 +1,30 @@
+    <h2>Login</h2>
+
+    <input id="username" placeholder="Nome">
+    <input id="password" placeholder="Senha">
+
+    <button onclick="login()">Entrar</button>
+
+    <script>
+        async function login(){
+        
+            const username = document.getElementById("username").value
+            const password = document.getElementById("password").value
+        
+            const params = new URLSearchParams()
+            params.append("username", username)
+            params.append("password", password)
+        
+            const resposta = await fetch("/login", {
+                method: "POST",
+                body: params
+            })
+        
+            if (resposta.ok) {
+                window.location.href = "/home"
+            } else {
+                console.log(resposta)
+                alert("sexo inválidas")
+            }
+        }
+    </script>

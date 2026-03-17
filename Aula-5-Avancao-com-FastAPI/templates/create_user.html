@@ -1,0 +1,36 @@
+<h2>Criar Usuário</h2>
+
+<input id="username" placeholder="Nome">
+<input id="password" placeholder="Senha">
+<input id="bio" placeholder="Bio">
+
+<button onclick="enviarUsuario()">Criar</button>
+
+<script>
+    async function enviarUsuario() {
+        const dados = {
+            username: document.getElementById("username").value,
+            password: document.getElementById("password").value,
+            bio: document.getElementById("bio").value
+        };
+
+        const resposta = await fetch('/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dados)
+        });
+
+        if (resposta.ok) {
+            const resultado = await resposta.json();
+            console.log(resultado)
+            alert("Usuário " + resultado.username + " criado!");
+        } else {
+            alert("Erro ao enviar!");
+        }
+}
+        
+</script>
+
+<a href="/login">Ir para login</a>
