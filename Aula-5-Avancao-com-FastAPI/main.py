@@ -72,9 +72,6 @@ def get_current_user(session_user: Annotated[str | None, Cookie()] = None):
 
     user = next((u for u in users_db if u.username == session_user), None)
 
-    if not user:
-        raise HTTPException(status_code=401, detail="Sessão laaa")
-
     return user
 
 @app.get("/home")
