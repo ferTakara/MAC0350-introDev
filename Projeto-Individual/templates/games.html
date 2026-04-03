@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/styleGames.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupiter</title>
+</head>
+
+<body>
+    <header>
+        <div id="headerCabecalho">
+            <h1>BabelGames</h1>
+
+            <div>
+                {% if user %}
+                    <a href="/home">Profile</a>
+                    <a href="/logout">Logout</a>
+                {% else %}
+                    <a href="/login">Login</a>
+                    <a href="/sign_in">Register</a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="games-container">
+
+            <a href="/add_game">Add games</a>
+
+            {% for jogo in jogos %}
+            <div class="game-card">
+                <img src="{{ jogo.capa }}" alt="{{ jogo.nome }}">
+                <h3>{{ jogo.nome }}</h3>
+            </div>
+            {% endfor %}
+    
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://www.youtube.com/watch?v=Zj7_mUZ6Cpw">Créditos | Fale conosco</a>
+        <a>© 1999 - 2026 - Superintendência de Tecnologia da Informação/USP</a> 
+    </footer>
+</body>
+
+</html>

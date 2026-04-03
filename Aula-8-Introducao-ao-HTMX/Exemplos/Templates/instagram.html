@@ -1,0 +1,40 @@
+<!-- Arquivo index.html -->
+
+<DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <title>Instagram2</title>
+            <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+        </head>
+        <body>
+            <h1>Instagram 2</h1>
+            <p>@mark_zucker postou</p>
+
+            <img src="https://preview.redd.it/mark-zuckerberg-v0-yjbmlxyhwxy41.jpg?auto=webp&s=7e8394f5907e6928d9b52b7cc3b4073598207b20" alt="uma foto" width="200">
+            
+            <div>
+                <button 
+                    hx-post="/curtir"
+                    hx-target="#likes"
+                    hx-confirm="Deseja mesmo curtir?">
+                    Curtir
+                </button>
+
+                <p>
+                    likes: 
+                    <span id="likes"
+                          hx-get="/likes"
+                          hx-trigger="load">
+                        0
+                    </span>
+                </p>
+
+                <button 
+                    hx-delete="/likes"
+                    hx-target="#likes"
+                    hx-confirm="Deseja mesmo retirar todas as curtidas?">
+                    Retirar curtidas
+                </button>
+            </div>
+        </body>
+    </html>

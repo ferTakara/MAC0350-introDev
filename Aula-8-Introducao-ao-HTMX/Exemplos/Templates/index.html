@@ -1,0 +1,81 @@
+<!-- Arquivo index.html -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Meu Site</title>
+        <script>
+            function selecionar(botaoClicado) {
+            let botoes = document.querySelectorAll("button");
+
+            botoes.forEach(btn => {
+                btn.classList.remove("ativo");
+            });
+
+            botaoClicado.classList.add("ativo");
+        }
+        </script>
+        <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    
+    <style>
+        button {
+            background-color: #ddd;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        /* botão selecionado */
+        button.ativo {
+            background-color: #555;
+            color: white;
+        }
+    </style>
+    </head>
+    
+    </head>
+    <body>
+        <h1>Meu Site</h1>
+        <p>Bem vindo ao meu site!</p>
+        <nav>
+            <button type="button"
+                    hx-get="/home/pagina1"
+                    hx-target="main"
+                    hx-push-url="true"
+                    onclick="selecionar(this)">
+                Página 1
+            </button>
+            <button hx-get="/home/pagina2"
+                    hx-target="main"
+                    hx-push-url="true"
+                    onclick="selecionar(this)">
+                Página 2
+            </button>
+            <button hx-get="/home/pagina3"
+                    hx-target="main"
+                    hx-push-url="true"
+                    onclick="selecionar(this)">
+                Página 3
+            </button>
+        </nav>
+
+        <script>
+            function selecionar(botaoClicado) {
+                let botoes = document.querySelectorAll("button");
+            
+                botoes.forEach(btn => {
+                    btn.classList.remove("ativo");
+                });
+            
+                botaoClicado.classList.add("ativo");
+            }
+        </script>
+
+        <hr>
+        <main hx-get="{{ pagina }}"
+              hx-target="main"
+              hx-trigger="load"
+              hx-push-url="true">
+        </main>
+    </body>
+</html>

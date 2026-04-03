@@ -1,0 +1,125 @@
+h1 {color: white}
+a {
+    color: lightblue;
+    text-decoration: none;
+}
+a:hover {
+    color: gray;
+}
+
+#headerCabecalho div {
+    display: flex;
+    gap: 20px;
+}
+
+#headerCabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;     
+    gap: 30vw;             
+}
+
+body {
+    background-color: rgba(24, 26, 33, 1);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 0.2vw;
+    background-color: rgb(18, 19, 24);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    position: relative;
+    margin: auto;
+    color: white;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: 
+        linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgb(24, 26, 33) 100%),
+        url("https://cdn.mos.cms.futurecdn.net/qCWBVKEAmrW4zQzEaGEjFg.jpg");
+
+    background-size: cover;
+
+    filter: blur(0.2vw);
+    z-index: -1;
+}   
+
+input {
+    padding: 0.8rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+
+    background-color: #2a2d35;
+    color: white;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+input:focus {
+    border: 1px solid #9da742;
+}
+
+button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+
+    background-color: #9da742;
+    color: black;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #b7c84a;
+    transform: scale(1.03);
+}
+
+.register-link {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #aaa;
+}
+
+#bodyMain {
+    margin-bottom: 0.5vw; 
+    background: rgba(24, 26, 33, 1);
+    width: 1000px;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+#forms {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2vw;
+    background-color: rgba(24, 26, 33, 1);
+}

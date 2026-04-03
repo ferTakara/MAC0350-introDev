@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupiter</title>
+    
+</head>
+
+<body>
+    <header>
+        <div id="headerCabecalho">
+            <h1>BabelGames</h1>
+
+            <div>
+                {% if user %}
+                    <a href="/home">Profile</a>
+                    <a href="/logout">Logout</a>
+                {% else %}
+                    <a href="/login">Login</a>
+                    <a href="/sign_in">Register</a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div id="bodyMain">
+        <section class="feature">
+            <h1>What is BabelGames?</h1>
+            <p>
+                BabelGames is a place to virtually track your game collection. Keep your backlog updated,
+                rate the games you've played and add those upcoming to your wishlist.
+            </p>
+        </section>
+    
+        <section class="feature">
+            <h2>Track your personal game collection</h2>
+            <p>
+                Log any and every game you've played, are currently playing, and want to play.
+                Use features like time tracking, journaling and platform ownership.
+            </p>
+        </section>
+    
+        <section class="feature">
+            <h2>Express your thoughts with reviews</h2>
+            <p>
+                See what everyone is thinking with reviews and ratings. Add your own review
+                and share your opinion.
+            </p>
+        </section>
+    
+        <section class="feature">
+            <h2>Keep up with the latest from friends</h2>
+            <p>
+                Follow others and get a live feed of their gaming activity, reviews, and lists.
+            </p>
+        </section>
+    
+        <section class="feature">
+            <h2>Create and organize games with lists</h2>
+            <p>
+                Build custom lists, track progress, and share them with the community.
+            </p>
+        </section>
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://www.youtube.com/watch?v=Zj7_mUZ6Cpw">Créditos | Fale conosco</a>
+        <a>© 1999 - 2026 - Superintendência de Tecnologia da Informação/USP</a> 
+    </footer>
+</body>
+
+</html>

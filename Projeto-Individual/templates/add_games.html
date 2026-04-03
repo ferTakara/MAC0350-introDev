@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/styleLoginRegister.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupiter</title>
+    
+    <script>
+        async function enviarUsuario() {
+            const dados = {
+                username:   document.getElementById("username").value,
+                email:      document.getElementById("email").value,
+                senha_hash: document.getElementById("password").value
+            };
+
+            const resposta = await fetch('/add_game', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dados)
+            });
+
+            if (resposta.ok) {
+                const resultado = await resposta.json();
+                console.log(resultado)
+                alert("User " + resultado.username + " successfully created!");
+            } else {
+                const erro = await resposta.json();
+                alert(erro.detail);
+            }
+        }
+        
+        function validarSenha() {
+            const senha = document.getElementById("password").value;
+            const confirmar = document.getElementById("confirmPassword").value;
+
+            if (senha !== confirmar) {
+                alert("Passwords do not match!");
+                return false;
+            }
+
+            return true
+        }
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+
+            if (!validarSenha()) return false;
+
+            await enviarUsuario();
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="headerCabecalho">
+            <h1>BabelGames</h1>
+
+            <div>
+                <a href="/login">Login</a>
+                <a href="/sign_in">Register</a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div id="bodyMain">
+            <section class="login-card">
+                <h2>Register</h2>
+                <form id="forms" onsubmit="return handleSubmit(event)">
+                    <input id="username" type="text" placeholder="Username" required>
+                    <input id="email" type="text" placeholder="Email" required>
+                    <input id="password" type="password" placeholder="Password" required>
+                    <input id="confirmPassword" type="password" placeholder="Confirm Password" required>
+                    <button type="submit">Create</button>
+                </form>
+
+                <p class="register-link">
+                    Already have an account? <a href="/login">Log in</a>
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://www.youtube.com/watch?v=Zj7_mUZ6Cpw">Créditos | Fale conosco</a>
+        <a>© 1999 - 2026 - Superintendência de Tecnologia da Informação/USP</a> 
+    </footer>
+</body>
+
+</html>

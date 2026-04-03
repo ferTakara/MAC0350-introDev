@@ -1,9 +1,45 @@
-    <h2>Login</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupiter</title>
+    
+</head>
 
-    <input id="username" placeholder="Nome">
-    <input id="password" placeholder="Senha">
+<body>
+    <header>
+        <div id="headerCabecalho">
+            <h1>BabelGames</h1>
 
-    <button onclick="login()">Entrar</button>
+            <div>
+                <a href="/login">Login</a>
+                <a href="/sign_in">Register</a>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div id="bodyMain">
+        <section class="login">
+            <h2>Login</h2>
+
+            <input id="username" placeholder="Nome">
+            <input id="password" placeholder="Senha">
+        
+            <button onclick="login()">Entrar</button>        
+        </section>
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://www.youtube.com/watch?v=Zj7_mUZ6Cpw">Créditos | Fale conosco</a>
+        <a>© 1999 - 2026 - Superintendência de Tecnologia da Informação/USP</a> 
+    </footer>
+</body>
+
+</html>
 
     <script>
         async function login(){
